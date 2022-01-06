@@ -4,19 +4,17 @@
       <!--      <a @click="changeLocale('en')" href="#">English</a> / <a @click="changeLocale('pt_BR')" href="#">Português</a>-->
     </div>
 
-    <div style="font-size: 20px; text-align: left; font-weight: bold">
-      <span style="color: orange">Manovale</span> |
-      <span style="color: brown">Artigiano</span> |
-      <span style="color: gray">Architetto</span> |
-      <span style="color: red">Legionario</span> |
-      <span style="color: blue">Mercante</span> |
-      <span style="color: purple">Patrono</span>
+    <div class="header">
+      <span v-on:click="scrollTo('Manovale')" style="color: orange">Manovale</span> |
+      <span v-on:click="scrollTo('Artigiano')" style="color: brown">Artigiano</span> |
+      <span v-on:click="scrollTo('Architetto')" style="color: gray">Architetto</span> |
+      <span v-on:click="scrollTo('Legionario')" style="color: red">Legionario</span> |
+      <span v-on:click="scrollTo('Mercante')" style="color: blue">Mercante</span> |
+      <span v-on:click="scrollTo('Patrono')" style="color: purple">Patrono</span>
     </div>
 
-    <div style="border: 1px dashed gray; margin-top: 5px; margin-bottom: 5px"/>
-
-    <section v-for="card in filteredItems" :key="card">
-      <h1 :style=getCardColor(card)>{{ card.name }}</h1>
+    <section v-for="card in filteredItems" :key="card.name">
+      <h1 :id="card.name" :style=getCardColor(card)>{{ card.name }}</h1>
       <p style="text-align: left">{{ $t('card ' + card.name) }}</p>
     </section>
 
@@ -30,73 +28,77 @@ window.addEventListener('beforeunload', function (e) {
 });
 
 let cards = [
-  {name: "Casa Popolare", type: "Manovale"},
-  {name: "Latrina", type: "Manovale"},
-  {name: "Strada", type: "Manovale"},
-  {name: "Osteria", type: "Manovale"},
+  {name: "Casa Popolare", role: "Manovale"},
+  {name: "Latrina", role: "Manovale"},
+  {name: "Strada", role: "Manovale"},
+  {name: "Osteria", role: "Manovale"},
 
-  {name: "Mercato", type: "Artigiano"},
-  {name: "Palizzata", type: "Artigiano"},
-  {name: "Porto", type: "Artigiano"},
-  {name: "Circo", type: "Artigiano"},
+  {name: "Mercato", role: "Artigiano"},
+  {name: "Palizzata", role: "Artigiano"},
+  {name: "Porto", role: "Artigiano"},
+  {name: "Circo", role: "Artigiano"},
 
-  {name: "Accademia", type: "Legionario"},
-  {name: "Arco", type: "Legionario"},
-  {name: "Atrio", type: "Legionario"},
-  {name: "Porta", type: "Legionario"},
-  {name: "Forgia", type: "Legionario"},
-  {name: "Santuario", type: "Legionario"},
-  {name: "Scuola", type: "Legionario"},
-  {name: "Terme", type: "Legionario"},
+  {name: "Accademia", role: "Legionario"},
+  {name: "Arco", role: "Legionario"},
+  {name: "Atrio", role: "Legionario"},
+  {name: "Porta", role: "Legionario"},
+  {name: "Forgia", role: "Legionario"},
+  {name: "Santuario", role: "Legionario"},
+  {name: "Scuola", role: "Legionario"},
+  {name: "Terme", role: "Legionario"},
 
-  {name: "Vomitorium", type: "Architetto"},
-  {name: "Torre", type: "Architetto"},
-  {name: "Muro", type: "Architetto"},
-  {name: "Dispensa", type: "Architetto"},
-  {name: "Anfiteatro", type: "Architetto"},
-  {name: "Acquedotto", type: "Architetto"},
-  {name: "Senato", type: "Architetto"},
-  {name: "Ponte", type: "Architetto"},
+  {name: "Vomitorium", role: "Architetto"},
+  {name: "Torre", role: "Architetto"},
+  {name: "Muro", role: "Architetto"},
+  {name: "Dispensa", role: "Architetto"},
+  {name: "Anfiteatro", role: "Architetto"},
+  {name: "Acquedotto", role: "Architetto"},
+  {name: "Senato", role: "Architetto"},
+  {name: "Ponte", role: "Architetto"},
 
-  {name: "Catacombe", type: "Mercante"},
-  {name: "Circo Massimo", type: "Mercante"},
-  {name: "Colosseo", type: "Mercante"},
-  {name: "Fogna", type: "Mercante"},
-  {name: "Giardino", type: "Mercante"},
-  {name: "Prigione", type: "Mercante"},
-  {name: "Studio", type: "Mercante"},
-  {name: "Villa", type: "Mercante"},
+  {name: "Catacombe", role: "Mercante"},
+  {name: "Circo Massimo", role: "Mercante"},
+  {name: "Colosseo", role: "Mercante"},
+  {name: "Fogna", role: "Mercante"},
+  {name: "Giardino", role: "Mercante"},
+  {name: "Prigione", role: "Mercante"},
+  {name: "Studio", role: "Mercante"},
+  {name: "Villa", role: "Mercante"},
 
-  {name: "Foro", type: "Patrono"},
-  {name: "Tempio", type: "Patrono"},
-  {name: "Basilica", type: "Patrono"},
-  {name: "Fontana", type: "Patrono"},
-  {name: "Statua", type: "Patrono"},
-  {name: "Scalinata", type: "Patrono"},
-  {name: "Palazzo", type: "Patrono"},
-  {name: "Ludus Magnus", type: "Patrono"},
+  {name: "Foro", role: "Patrono"},
+  {name: "Tempio", role: "Patrono"},
+  {name: "Basilica", role: "Patrono"},
+  {name: "Fontana", role: "Patrono"},
+  {name: "Statua", role: "Patrono"},
+  {name: "Scalinata", role: "Patrono"},
+  {name: "Palazzo", role: "Patrono"},
+  {name: "Ludus Magnus", role: "Patrono"},
 ]
 
 
 export default {
   name: 'Application',
   methods: {
+    scrollTo(role) {
+      let card = cards.find((card) => card.role === role)
+      document.getElementById(card.name).scrollIntoView()
+    },
     getCardColor(card) {
       var color;
-      if (card.type === 'Manovale')
+      if (card.role === 'Manovale')
         color = 'orange'
-      else if (card.type === 'Artigiano')
+      else if (card.role === 'Artigiano')
         color = 'brown'
-      else if (card.type === 'Legionario')
+      else if (card.role === 'Legionario')
         color = 'red'
-      else if (card.type === 'Architetto')
+      else if (card.role === 'Architetto')
         color = 'grey'
-      else if (card.type === 'Mercante')
+      else if (card.role === 'Mercante')
         color = 'blue'
       else
         color = 'purple'
 
-      return 'text-align: left; color: ' + color
+      return 'scroll-margin: 60px; text-align: left; color: ' + color
     },
   },
   computed: {
@@ -117,5 +119,21 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px dashed gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  padding-bottom: 10px;
+  padding-top: 10px
+}
 
+.header span {
+  cursor: pointer;
+}
 </style>
