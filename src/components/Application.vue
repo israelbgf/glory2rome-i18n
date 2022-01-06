@@ -18,6 +18,8 @@
       <p style="text-align: left">{{ $t('card ' + card.name) }}</p>
     </section>
 
+    <div class="avoidFixedFooterHidingContent"/>
+
   </div>
 </template>
 
@@ -137,5 +139,9 @@ export default {
 
 .header span {
   cursor: pointer;
+}
+
+.avoidFixedFooterHidingContent {
+  height: 60px;
 }
 </style>
