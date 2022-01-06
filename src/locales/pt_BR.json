@@ -1,0 +1,47 @@
+{
+  "card Strada": "Ao avançar uma construção de um edifício de PEDRA, pode usar qualquer tipo de material.",
+  "card Osteria": "Toda vez que escolher a ação PATRONO, pode escolher pegar um cliente do BARALHO ou da MESA e depois um do BARALHO.",
+  "card Casa Popolare": "O limite máximo de CLIENTES é aumentado em 2.",
+  "card Latrina": "Antes de PENSAR, pode descartar uma carta da sua MÃO para a MESA.",
+
+  "card Mercato": "O limite máximo do seu COFRE é aumentado em 2.",
+  "card Palizzata": "Fique imune à ação do Legionário (se quiser).",
+  "card Porto": "Toda vez que escolher a ação OPERÁRIO, pode escolher um material da MESA e/ou da sua MÃO.",
+  "card Circo": "Pode jogar duas cartas do mesmo TIPO como um SENADOR.",
+
+  "card Accademia": "No fim do turno pode PENSAR quando tiver executado pelo menos uma ação ARTESÃO",
+  "card Arco": "Cada vez que executar ação ARQUITETO, pode escolher material da MESA. Não pode utilizar como FUNDAÇÃO.",
+  "card Atrio": "Toda vez que escolher a ação MERCADOR, pode escolher pegar do BARALHO (não olhe a carta).",
+  "card Porta": "Todos as suas CONSTRUÇÕES de MÁRMORE incompletas, desempenham suas funções (mas não Influência).",
+  "card Forgia": "Quando completo, pode realizar uma ação OPERÁRIO para cada ponto de INFLUÊNCIA.",
+  "card Santuario": "O limite máximo da sua mão é aumentado em 2.",
+  "card Scuola": "Quando completo, pode PENSAR para cada ponto de INFLUÊNCIA.",
+  "card Terme": "Quando adquirir um novo CLIENTE, pode executar imediatamente sua ação. (Pode combinar 2 CLIENTES para pegar uma FUNDAÇÃO fora da cidade)",
+
+  "card Vomitorium": "Antes de PENSAR, pode descartar uma carta da sua mão para a MESA.",
+  "card Torre": "Pode utilizar PEDRA para avançar a CONSTRUÇÃO de qualquer EDIFÍCIO. Pode iniciar uma FUNDAÇÃO fora da cidade com apenas uma ação.",
+  "card Muro": "Fica imune à ação do Legionário (se quiser). Vale 1 PV para cada 2 materiais no seu ESTOQUE.",
+  "card Dispensa": "Cada um dos seus CLIENTES pode ser usado como OPERÁRIO (além da sua função normal).",
+  "card Anfiteatro": "Quando completo, pode realizar uma ação de ARTESÃO para cada ponto de INFLUÊNCIA.",
+  "card Acquedotto": "Duplique o limite da CLIENTELA. Cada vez que escolher a ação PATRONO, pode pegar um CLIENTE da MESA e/ou um da sua MÃO.",
+  "card Senato": "No fim de cada turno, você pode pegar qualquer número de SENADORES jogados pelos seus oponentes.",
+  "card Ponte": "Quando escolher a ação Legionário, pode pegar material do ESTOQUE além da MÃO de TODOS. A PALIZZATA perde efeito contra você.",
+
+  "card Catacombe": "O jogo termina imediatamente e a pontuação é calculada normalmente.",
+  "card Circo Massimo": "Quando CONDUZIR ou SEGUIR, você pode realizar a ação duas vezes para cada cliente.",
+  "card Colosseo": "Toda vez que realizar a ação LEGIONÁRIO, você também pode pegar uma carta da CLIENTELA que vai para o COFRE.",
+  "card Fogna": "No final do turno, pode pegar a carta que foi jogada para CONDUZIR ou SEGUIR para o seu ESTOQUE",
+  "card Giardino": "Quando completo, pode realizar a ação PATRONO para cada ponto de INFLUÊNCIA.",
+  "card Prigione": "Quando completo, pode trocar esta carta com uma CONSTRUÇÃO completa de um adversário.",
+  "card Studio": "Pode avançar qualquer tipo de CONSTRUÇÃO usando MÁRMORE com a ação ARTESÃO/ARQUITETO.",
+  "card Villa": "Se usar o ARQUITETO pode completar ESTA CONSTRUÇÃO com apenas uma PEDRA.",
+
+  "card Foro": "Assim que você tiver na sua CLIENTELA uma carta de cada tipo, o jogo termina imediatamente e você vence a partida.",
+  "card Tempio": "O limite máximo da sua MÃO é aumentado em 4.",
+  "card Basilica": "Cada vez que executar a ação MERCADOR, pode escolher pegar um material do ESTOQUE e/ou um da sua MÃO (sem revelar).",
+  "card Fontana": "Cada vez que executar a ação ARTESÃO, pode escolher pegar uma carta do BARALHO. Se não usar a carta, coloque ela na sua MÃO.",
+  "card Statua": "Pode iniciar a construção com qualquer tipo de FUNDAÇÃO. Avance a construção com MÁRMORE ou o material da FUNDAÇÃO.",
+  "card Scalinata": "Cada vez que executar a ação ARQUITETO, pode adicionar um material à uma CONSTRUÇÃO completa de um oponente para tornala pública.",
+  "card Palazzo": "Pode CONDUZIR ou SEGUIR com uma múltiplas carta da mesma FUNÇÃO para executar a mesma ação várias vezes.",
+  "card Ludus Magnus": "Cada MERCANTE na sua CLIENTELA vale como qualquer tipo de FUNÇÃO."
+}
