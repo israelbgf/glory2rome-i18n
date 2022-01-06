@@ -98,7 +98,7 @@ export default {
       else
         color = 'purple'
 
-      return 'scroll-margin: 60px; text-align: left; color: ' + color
+      return 'scroll-margin: 20px; text-align: left; color: ' + color
     },
   },
   computed: {
@@ -120,17 +120,19 @@ export default {
 
 <style scoped>
 .header {
+  user-select: none;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
   font-size: 20px;
   text-align: left;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px dashed gray;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  border-top: 1px solid;
   background-color: white;
-  padding-bottom: 10px;
-  padding-top: 10px
+  padding: 10px;
 }
 
 .header span {
